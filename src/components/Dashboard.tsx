@@ -1,5 +1,5 @@
 import React from 'react';
-import { Target, Users, BarChart3, FileSlide, Plus, ArrowRight } from 'lucide-react';
+import { Target, Users, BarChart3, FileText, Plus, ArrowRight } from 'lucide-react';
 import { Button } from './Button';
 import { Card } from './Card';
 import { ProgressTracker } from './ProgressTracker';
@@ -64,7 +64,7 @@ export function Dashboard({ onNavigate }: DashboardProps) {
       completed: steps[2].completed,
     },
     {
-      icon: FileSlide,
+      icon: FileText,
       title: 'Pitch Deck Generator',
       description: 'Create investor presentation slides',
       action: () => onNavigate('pitch-deck'),

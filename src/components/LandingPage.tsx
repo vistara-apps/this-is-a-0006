@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Lightbulb, Target, BarChart3, FileSlide, ArrowRight, CheckCircle } from 'lucide-react';
+import { Lightbulb, Target, BarChart3, FileText, ArrowRight, CheckCircle } from 'lucide-react';
 import { Button } from './Button';
 import { Input } from './Input';
 import { Card } from './Card';
@@ -48,7 +48,7 @@ export function LandingPage({ onNavigate }: LandingPageProps) {
       description: 'Interactive Lean Canvas builder with AI suggestions for each section of your business model.',
     },
     {
-      icon: FileSlide,
+      icon: FileText,
       title: 'AI Pitch Deck Generator',
       description: 'Generate professional pitch deck slides based on your validated business concept.',
     },

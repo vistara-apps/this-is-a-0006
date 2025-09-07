@@ -6,10 +6,12 @@ import { ProblemSolutionGenerator } from './components/ProblemSolutionGenerator'
 import { PersonaBuilder } from './components/PersonaBuilder';
 import { LeanCanvasBuilder } from './components/LeanCanvasBuilder';
 import { PitchDeckGenerator } from './components/PitchDeckGenerator';
+import { PricingPage } from './components/PricingPage';
+import { ErrorBoundary } from './components/ErrorBoundary';
 import { AuthProvider, useAuth } from './contexts/AuthContext';
 import { AppProvider } from './contexts/AppContext';
 
-type View = 'landing' | 'dashboard' | 'problem-solution' | 'persona' | 'lean-canvas' | 'pitch-deck';
+type View = 'landing' | 'dashboard' | 'problem-solution' | 'persona' | 'lean-canvas' | 'pitch-deck' | 'pricing';
 
 function AppContent() {
   const { user } = useAuth();
@@ -41,6 +43,8 @@ function AppContent() {
         return <LeanCanvasBuilder onNavigate={setCurrentView} />;
       case 'pitch-deck':
         return <PitchDeckGenerator onNavigate={setCurrentView} />;
+      case 'pricing':
+        return <PricingPage onNavigate={setCurrentView} />;
       default:
         return <Dashboard onNavigate={setCurrentView} />;
     }
@@ -55,11 +59,13 @@ function AppContent() {
 
 function App() {
   return (
-    <AuthProvider>
-      <AppProvider>
-        <AppContent />
-      </AppProvider>
-    </AuthProvider>
+    <ErrorBoundary>
+      <AuthProvider>
+        <AppProvider>
+          <AppContent />
+        </AppProvider>
+      </AuthProvider>
+    </ErrorBoundary>
   );
 }
 

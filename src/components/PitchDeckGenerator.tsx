@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ArrowLeft, Sparkles, FileSlide, Download, Plus, X } from 'lucide-react';
+import { ArrowLeft, Sparkles, FileText, Download, Plus, X } from 'lucide-react';
 import { Button } from './Button';
 import { Card } from './Card';
 import { Textarea } from './Textarea';
@@ -205,7 +205,7 @@ ${slide.content}
           <Card key={index}>
             <div className="flex items-start justify-between mb-4">
               <div className="flex items-center space-x-2">
-                <FileSlide className="h-5 w-5 text-primary-500" />
+                <FileText className="h-5 w-5 text-primary-500" />
                 <span className="text-sm font-medium text-textSecondary">
                   Slide {index + 1}
                 </span>
@@ -281,7 +281,7 @@ ${slide.content}
           <Card key={index} variant="elevated" className="h-64 overflow-hidden">
             <div className="flex items-center justify-between mb-3">
               <div className="flex items-center space-x-2">
-                <FileSlide className="h-4 w-4 text-primary-500" />
+                <FileText className="h-4 w-4 text-primary-500" />
                 <span className="text-xs font-medium text-textSecondary">
                   Slide {index + 1}
                 </span>
