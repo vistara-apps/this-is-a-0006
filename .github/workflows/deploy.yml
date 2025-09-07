@@ -1,5 +1,5 @@
 name: Deploy to Vercel
-# Fixed workflow conditionals
+# Fixed workflow conditionals - testing sync
 
 on:
   push:
