@@ -70,9 +70,7 @@ jobs:
                 issue_number: context.issue.number,
                 owner: context.repo.owner,
                 repo: context.repo.repo,
-                body: `🚀 **Preview Deployment Ready!**
-                \n\n📱 **URL:** ${deploymentUrl}
-                \n\nThis preview will be automatically updated when you push new commits to this PR.`
+                body: '🚀 **Preview Deployment Ready!**\n\n📱 **URL:** ' + deploymentUrl + '\n\nThis preview will be automatically updated when you push new commits to this PR.'
               });
             }
             
@@ -85,7 +83,5 @@ jobs:
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: `✅ **Build Successful!**
-              \n\n📦 The application has been built successfully.
-              \n\n⚠️ Vercel deployment is not configured. To enable automatic deployments, add the required Vercel secrets to your repository settings.`
+              body: '✅ **Build Successful!**\n\n📦 The application has been built successfully.\n\n⚠️ Vercel deployment is not configured. To enable automatic deployments, add the required Vercel secrets to your repository settings.'
             });
